@@ -1,0 +1,6 @@
+---
+Name: minimalist_theme_config
+---
+Page_Controller:
+  extensions:
+    - PageControllerThemeExtension
