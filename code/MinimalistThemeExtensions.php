@@ -30,7 +30,7 @@ class PageControllerThemeExtension extends Extension {
 			Requirements::javascript('themes/ssau-minimalist/js/general.js');
 			Requirements::javascript('intranet-sis/javascript/info-lists.js');
 
-			if ($this->owner instanceof Dashlet_Controller) {
+			if ($this->owner instanceof DashboardController) {
 				Requirements::javascript('themes/ssau-minimalist/js/dashboards.js');
 			}
 		}
