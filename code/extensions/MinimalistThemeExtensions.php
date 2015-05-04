@@ -7,10 +7,19 @@
  * @license BSD License http://www.silverstripe.org/bsd-license
  */
 class PageControllerThemeExtension extends Extension {
+
 	private static $include_requirements = true;
-	
-	public function onBeforeInit() {
-		if (Config::inst()->get('PageControllerThemeExtension', 'include_requirements') && Config::inst()->get('SSViewer', 'theme') == 'ssau-minimalist') {
+
+	private static $supported_themes = array(
+		'ssau-minimalist'
+	);
+
+	public function onAfterInit() {
+
+		$config = Config::inst();
+		$theme = $config->get('SSViewer', 'theme');
+		$supported = $config->get('PageControllerThemeExtension', 'supported_themes');
+		if (Config::inst()->get('PageControllerThemeExtension', 'include_requirements') && in_array($theme, $supported)) {
 			// we'll use the frontend dashboard jquery
 			Requirements::block(THIRDPARTY_DIR .'/jquery/jquery.js');
 			
@@ -23,15 +32,15 @@ class PageControllerThemeExtension extends Extension {
 			Requirements::javascript('frontend-dashboards/javascript/jquery-migrate-1.2.1.min.js');
 			Requirements::javascript(THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js');
 			
-			Requirements::javascript('themes/ssau-minimalist/js/modernizr.js');
-			Requirements::javascript('themes/ssau-minimalist/js/foundation.min.js');
+			Requirements::javascript("themes/{$theme}/js/modernizr.js");
+			Requirements::javascript("themes/{$theme}/js/foundation.min.js");
 			
-			Requirements::javascript('themes/ssau-minimalist/js/jquery.slides.min.js');
-			Requirements::javascript('themes/ssau-minimalist/js/general.js');
+			Requirements::javascript("themes/{$theme}/js/jquery.slides.min.js");
+			Requirements::javascript("themes/{$theme}/js/general.js");
 			Requirements::javascript('intranet-sis/javascript/info-lists.js');
 
 			if ($this->owner instanceof DashboardController) {
-				Requirements::javascript('themes/ssau-minimalist/js/dashboards.js');
+				Requirements::javascript("themes/{$theme}/js/dashboards.js");
 			}
 		}
 	}

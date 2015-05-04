@@ -3,4 +3,7 @@ Name: minimalist_theme_config
 ---
 ContentController:
   extensions:
-    - PageControllerThemeExtension
+    - 'PageControllerThemeExtension'
+TimelineController:
+  extensions:
+    - 'TimelineIntranetExtension'
