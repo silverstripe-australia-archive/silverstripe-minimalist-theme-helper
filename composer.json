@@ -2,5 +2,10 @@
 	"name": "silverstripe-australia/minimalist-theme-helper",
 	"description": "Helper module for the SSAU minimalist theme.",
 	"type": "silverstripe-module",
-	"license": "BSD-3-Clause"
+	"license": "BSD-3-Clause",
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.1.x-dev"
+		}
+	}
 }

@@ -38,6 +38,7 @@ class PageControllerThemeExtension extends Extension {
 			Requirements::javascript("themes/{$theme}/js/jquery.slides.min.js");
 			Requirements::javascript("themes/{$theme}/js/general.js");
 			Requirements::javascript('intranet-sis/javascript/info-lists.js');
+			Requirements::javascript('intranet-sis/javascript/info-lists-foundation.js');
 
 			if ($this->owner instanceof DashboardController) {
 				Requirements::javascript("themes/{$theme}/js/dashboards.js");
