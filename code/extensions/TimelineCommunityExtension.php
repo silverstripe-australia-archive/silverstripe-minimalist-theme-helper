@@ -1,6 +1,6 @@
 <?php
 
-class TimelineIntranetExtension extends Extension {
+class TimelineCommunityExtension extends Extension {
 
 	public function onAfterInit() {
 

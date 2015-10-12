@@ -6,4 +6,4 @@ ContentController:
     - 'PageControllerThemeExtension'
 TimelineController:
   extensions:
-    - 'TimelineIntranetExtension'
+    - 'TimelineCommunityExtension'
