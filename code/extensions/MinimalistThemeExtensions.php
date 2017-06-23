@@ -3,7 +3,7 @@
 /**
  * 
  *
- * @author <marcus@silverstripe.com.au>
+ * @author <marcus@symbiote.com.au>
  * @license BSD License http://www.silverstripe.org/bsd-license
  */
 class PageControllerThemeExtension extends Extension
@@ -12,7 +12,7 @@ class PageControllerThemeExtension extends Extension
     private static $include_requirements = true;
 
     private static $supported_themes = array(
-        'ssau-minimalist'
+        'symbiote-minimalist'
     );
 
     public function onAfterInit()

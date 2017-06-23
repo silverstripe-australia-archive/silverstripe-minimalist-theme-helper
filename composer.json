@@ -1,6 +1,6 @@
 {
 	"name": "symbiote-library/silverstripe-minimalist-theme-helper",
-	"description": "Helper module for the SSAU minimalist theme.",
+	"description": "Helper module for the symbiote minimalist theme.",
 	"type": "silverstripe-module",
 	"license": "BSD-3-Clause",
 	"extra": {
