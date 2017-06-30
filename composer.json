@@ -4,6 +4,7 @@
 	"type": "silverstripe-module",
 	"license": "BSD-3-Clause",
 	"extra": {
+		"installer-name": "minimalist-theme-helper",
 		"branch-alias": {
 			"dev-master": "2.0.x-dev"
 		}
